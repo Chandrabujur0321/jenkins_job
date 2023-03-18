@@ -12,6 +12,8 @@ pipeline {
         stage('docker build') {
             steps {
                 sh 'docker build -t chandu .'
+                sh 'docker images'
+
 
             }
 
