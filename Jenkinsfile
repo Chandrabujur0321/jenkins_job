@@ -6,7 +6,8 @@ pipeline {
             steps {
                 echo 'Building..'
             }
-            }
+        }
+            
 
         stage('docker build') {
             steps {
