@@ -12,9 +12,6 @@ pipeline {
         stage('docker build') {
             steps {
                 sh 'docker build -t chandu .'
-                
-
-
             }
 
         } 
@@ -25,10 +22,5 @@ pipeline {
                   archiveArtifacts artifacts: 'images.txt'
               }
             }
-
-
-           
-    
-
     }
 }
