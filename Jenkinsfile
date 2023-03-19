@@ -12,12 +12,23 @@ pipeline {
         stage('docker build') {
             steps {
                 sh 'docker build -t chandu .'
-                sh 'docker images > images.txt'
-                archiveArtifacts artifacts: 'images.txt'
+                
 
 
             }
 
-        }
+        } 
+            stage('checking docker images') {
+
+               steps {
+                  sh 'docker images > images.txt'
+                  archiveArtifacts artifacts: 'images.txt'
+              }
+            }
+
+
+           
+    
+
     }
 }
