@@ -3,7 +3,7 @@ pipeline {
     parameters { booleanParam(name: 'Docker', defaultValue: false, description: 'docker buid')
                  booleanParam(name: 'images', defaultValue: false, description: 'docker buid') 
     }
-    }
+    
    
     agent any
     stages {
