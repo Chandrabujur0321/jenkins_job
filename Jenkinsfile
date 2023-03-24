@@ -13,17 +13,12 @@ pipeline {
         stage('docker build') {
             steps {
                 script{
-
-                      if(params.Docker=='true'){
-                
-                         docker build -t chandu .
+                    if(params.Docker=='true'){
+                        docker build -t chandu .
+                    }
                 }
-                
-                }
-
-
-            }
-        }
+           }
+       }
 
         
    /*       stage('checking docker images') {
