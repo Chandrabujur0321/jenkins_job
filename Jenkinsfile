@@ -1,3 +1,4 @@
+parameters { booleanParam(name: 'Docker', defaultValue: false, description: 'docker buid') }
 pipeline {
     agent any
 
@@ -18,13 +19,13 @@ pipeline {
             }
 
         } 
-            stage('checking docker images') {
+   /*       stage('checking docker images') {
 
                steps {
                   sh 'docker images > images.txt'
                   archiveArtifacts artifacts: 'images.txt'
               }
-            }
+            } */
 
 
            
