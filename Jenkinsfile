@@ -21,6 +21,7 @@ pipeline {
 
 
             }
+        }
 
         
    /*       stage('checking docker images') {
