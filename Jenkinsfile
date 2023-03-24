@@ -12,7 +12,10 @@ pipeline {
 
         stage('docker build') {
             steps {
-                sh 'docker build -t chandu .'
+                if(params.Docker=='true'){
+                
+                  sh 'docker build -t chandu .'
+                }
                 
 
 
