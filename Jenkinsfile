@@ -1,3 +1,4 @@
+parameters { booleanParam(name: 'Docker', defaultValue: false, description: 'docker buid') }
 pipeline {
     agent any
 
@@ -11,16 +12,37 @@ pipeline {
 
         stage('docker build') {
             steps {
+
+                if(params.Docker=='true'){
+                
+                  sh 'docker build -t chandu .'
+                }
+                
+
+
+            }
+
+        
+   /*       stage('checking docker images') {
+
                 sh 'docker build -t chandu .'
             }
 
         } 
             stage('checking docker images') {
 
+
                steps {
                   sh 'docker images > images.txt'
                   archiveArtifacts artifacts: 'images.txt'
               }
-            }
+
+            } */
+
+
+           
+    
+
+
     }
 }
